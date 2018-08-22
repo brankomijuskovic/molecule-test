@@ -1,0 +1,9 @@
+---
+# tasks file for centos7-common
+- name: Install epel
+  yum: name=epel-release
+- name: Install htop
+  yum: name=htop
+- name: install Vim
+  yum: name=vim
+...
