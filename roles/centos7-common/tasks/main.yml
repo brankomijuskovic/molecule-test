@@ -4,6 +4,6 @@
   yum: name=epel-release
 - name: Install htop
   yum: name=htop
-- name: install Vim
+- name: Install vim
   yum: name=vim
 ...
