@@ -1,8 +1,5 @@
 ---
 # tasks file for linux-common
-- name: Add epel repo if OS is Centos
-  yum: name=epel-release
-  when: ansible_distribution == 'CentOS'
 - name: Install htop
   package: name=htop state=present
 - name: Install vim
@@ -11,8 +8,4 @@
   package: name=nginx state=present
 - name: Make sure nginx is running and starting at boot
   service: name=nginx state=started enabled=yes
-  when: ansible_distribution != 'CentOS'
-- name: Make sure nginx is running and starting at boot
-  systemd: name=nginx state=started enabled=yes daemon_reload=yes
-  when: ansible_distribution == 'CentOS'
 ...
