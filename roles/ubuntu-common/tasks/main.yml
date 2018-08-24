@@ -4,8 +4,8 @@
   package: name=htop state=present
 - name: Install vim
   package: name=vim state=present
-- name: Install nginx 
+- name: Install nginx
   package: name=nginx state=present
 - name: Make sure nginx is running and starting at boot
-  service: name=nginx state=started enabled=yes 
+  service: name=nginx state=started enabled=yes
 ...
