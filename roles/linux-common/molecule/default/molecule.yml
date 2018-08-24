@@ -6,7 +6,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: ubuntu-18.04
+  - name: ubuntu
     image: ubuntu:18.04
     privileged: true
   - name: debian
