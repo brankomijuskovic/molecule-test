@@ -11,3 +11,8 @@ def test_htop_is_installed(host):
 
 def test_vim_is_there(host):
 	assert host.package("vim-enhanced").is_installed
+
+def test_nginx_is_running(host):
+	assert host.service("nginx").is_running
+	assert host.service("nginx").is_enabled
+
