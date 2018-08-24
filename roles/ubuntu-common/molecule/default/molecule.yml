@@ -6,8 +6,11 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: instance
+  - name: ubuntu
     image: ubuntu
+    privileged: true
+  - name: debian
+    image: debian
     privileged: true
 provisioner:
   name: ansible

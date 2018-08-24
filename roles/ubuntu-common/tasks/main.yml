@@ -3,7 +3,7 @@
 - name: Install htop
   package: name=htop state=present
 - name: Install vim
-  package: name=vim state=present
+  package: name=vim-common state=present
 - name: Install nginx
   package: name=nginx state=present
 - name: Make sure nginx is running and starting at boot
