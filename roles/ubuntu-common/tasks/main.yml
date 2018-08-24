@@ -1,13 +1,11 @@
 ---
 # tasks file for centos7-common
-- name: Install epel
-  yum: name=epel-release
 - name: Install htop
-  yum: name=htop
+  package: name=htop
 - name: Install vim
-  yum: name=vim
+  package: name=vim
 - name: Install nginx
-  yum: name=nginx
+  package: name=nginx
 - name: Make sure nginx is running and starting at boot
   service: name=nginx state=started enabled=yes 
 ...
