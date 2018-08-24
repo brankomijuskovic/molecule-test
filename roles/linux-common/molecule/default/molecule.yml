@@ -12,9 +12,6 @@ platforms:
   - name: debian
     image: debian
     privileged: true
-  - name: ubuntu-16.04
-    image: ubuntu:16.04
-    privileged: true
 provisioner:
   name: ansible
   lint:
