@@ -12,6 +12,9 @@ platforms:
   - name: debian
     image: debian
     privileged: true
+  - name: centos7
+    image: retr0h/centos7-systemd-ansible
+    privileged: true
 provisioner:
   name: ansible
   lint:
