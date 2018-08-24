@@ -1,5 +1,8 @@
 ---
-# tasks file for ubuntu-common
+# tasks file for linux-common
+- name: Add epel repo if OS is Centos
+  yum: name=epel-release
+  when: ansible_distribution == 'CentOS'
 - name: Install htop
   package: name=htop state=present
 - name: Install vim
