@@ -11,4 +11,8 @@
   package: name=nginx state=present
 - name: Make sure nginx is running and starting at boot
   service: name=nginx state=started enabled=yes
+  when: ansible_distribution != 'CentOS'
+- name: Make sure nginx is running and starting at boot
+  service: name=nginx state=started enabled=yes use=systemd
+  when: ansible_distribution == 'CentOS'
 ...
